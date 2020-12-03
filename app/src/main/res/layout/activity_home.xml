@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rb_spider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spider Man" />
+
+            <RadioButton
+                android:id="@+id/rb_super"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Super Man" />
+
+            <RadioButton
+                android:id="@+id/rb_iron"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iron Man" />
+
+            <RadioButton
+                android:id="@+id/rb_flash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flash" />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="122dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="52dp"
+        android:text="Start"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="122dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="48dp"
+        android:text="Stop"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
