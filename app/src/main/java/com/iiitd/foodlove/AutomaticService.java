@@ -29,6 +29,8 @@ public class AutomaticService extends Service {
     private Context context = null;
     private int counter = 0;
 
+    public String hero;
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -46,6 +48,11 @@ public class AutomaticService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+
+        if(intent != null){
+            String h = intent.getStringExtra("H");
+            System.out.println("REC ===================== " + h);
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
             startMyOwnForeground();
@@ -66,8 +73,8 @@ public class AutomaticService extends Service {
 
         Log.d("TAG", "on destroy!");
 
-        Intent broadcastIntent = new Intent("com.iiitd.foodlove.restartService");
-        sendBroadcast(broadcastIntent);
+//        Intent broadcastIntent = new Intent("com.iiitd.foodlove.restartService");
+//        sendBroadcast(broadcastIntent);
         stopTimerTask();
 
         if (mClipboardManager != null) {
@@ -86,9 +93,10 @@ public class AutomaticService extends Service {
             public void run() {
                 Log.d("TAG", "in timer ++++  " + (counter++));
                 System.out.println("PLAY VIDEO NOW");
-                Intent intent = new Intent(getApplicationContext(), Test.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("C", counter);
+                intent.putExtra("H", hero);
                 startActivity(intent);
             }
         };
