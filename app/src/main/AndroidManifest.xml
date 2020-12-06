@@ -15,10 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodLove">
         <activity android:name=".VideoActivity"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape">
 
         </activity>
-        <activity android:name=".HomeScreen">
+        <activity android:name=".HomeScreen"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
