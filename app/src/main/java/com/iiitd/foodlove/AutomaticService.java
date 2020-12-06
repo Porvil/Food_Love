@@ -4,7 +4,6 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.Service;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -21,14 +20,10 @@ import java.util.TimerTask;
 
 public class AutomaticService extends Service {
 
-    private ClipboardManager mClipboardManager;
-    private final int TIME_DELAY = 1000;
-    private final int TIME_PERIOD = 10000;
     private Timer timer;
     private TimerTask timerTask;
     private Context context = null;
     private int counter = 0;
-
     public String hero;
 
     @Nullable
@@ -44,14 +39,15 @@ public class AutomaticService extends Service {
     }
 
     public AutomaticService(){
+
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         if(intent != null){
-            String h = intent.getStringExtra("H");
-            System.out.println("REC ===================== " + h);
+            hero = intent.getStringExtra(Constants.HERO);
+            System.out.println("hero ===== " + hero);
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
@@ -61,8 +57,6 @@ public class AutomaticService extends Service {
         super.onStartCommand(intent, flags, startId);
 
         startTimer();
-        mClipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-        mClipboardManager.addPrimaryClipChangedListener(mOnPrimaryClipChangedListener);
 
         return START_STICKY;
     }
@@ -76,16 +70,12 @@ public class AutomaticService extends Service {
 //        Intent broadcastIntent = new Intent("com.iiitd.foodlove.restartService");
 //        sendBroadcast(broadcastIntent);
         stopTimerTask();
-
-        if (mClipboardManager != null) {
-            mClipboardManager.removePrimaryClipChangedListener(mOnPrimaryClipChangedListener);
-        }
     }
 
     public void startTimer() {
         timer = new Timer();
         initializeTimerTask();
-        timer.schedule(timerTask, TIME_DELAY, TIME_PERIOD);
+        timer.schedule(timerTask, Constants.TIME_DELAY, Constants.TIME_PERIOD);
     }
 
     public void initializeTimerTask() {
@@ -93,10 +83,9 @@ public class AutomaticService extends Service {
             public void run() {
                 Log.d("TAG", "in timer ++++  " + (counter++));
                 System.out.println("PLAY VIDEO NOW");
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), VideoActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("C", counter);
-                intent.putExtra("H", hero);
+                intent.putExtra(Constants.HERO, hero);
                 startActivity(intent);
             }
         };
@@ -108,30 +97,6 @@ public class AutomaticService extends Service {
             timer = null;
         }
     }
-
-    private ClipboardManager.OnPrimaryClipChangedListener mOnPrimaryClipChangedListener =
-            new ClipboardManager.OnPrimaryClipChangedListener() {
-                @Override
-                public void onPrimaryClipChanged() {
-
-                    String charSequence = "EMPTY";
-                    if(mClipboardManager.getPrimaryClip().getItemAt(0).getText() != null)
-                        charSequence =  mClipboardManager.getPrimaryClip().getItemAt(0).getText().toString();
-                    System.out.println("Copied Link : ====================" + charSequence);
-                    Log.d("TAG", charSequence);
-                    boolean isActivityStopped = HelperFunctions.isActivityRunning(getBaseContext(), HomeScreen.class);
-//                    boolean isActivityStopped = isActivityRunning(HomeScreen.class);
-                    boolean isInstLinkPossibility = HelperFunctions.isInstaLink(charSequence);
-
-                    if(isInstLinkPossibility){
-                        Intent homeScreenIntent = new Intent(getApplicationContext(), HomeScreen.class);
-                        homeScreenIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        homeScreenIntent.putExtra("LINK", charSequence);
-                        startActivity(homeScreenIntent);
-                    }
-                }
-            };
-
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void startMyOwnForeground(){
@@ -146,7 +111,6 @@ public class AutomaticService extends Service {
 
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
         Notification notification = notificationBuilder.setOngoing(true)
-//                .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle("Food Love is running in background")
                 .setPriority(NotificationManager.IMPORTANCE_MIN)
                 .setCategory(Notification.CATEGORY_SERVICE)

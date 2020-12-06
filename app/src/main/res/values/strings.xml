@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Food Love</string>
+
+    <string name="Ironman">Iron Man</string>
+    <string name="Superman">Super Man</string>
+    <string name="Spiderman">Spider Man</string>
+    <string name="Flash">Flash</string>
+    <string name="Swallow">Swallow vs Chew</string>
+    <string name="Chewfast">Chew Fast vs Chew Slow</string>
+
 </resources>
