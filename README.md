@@ -8,7 +8,7 @@ Meal Habits is an android application which triggers a video at specific interbv
 - Install the APK.
 
 ### Supported Android Versions:
-- Android 5.0 (API Level-21) and above.
+- Android 5.0 (API Level-21) to Android 9.0 (API Level-28)
 
 ### Developed By:
 - Porvil
