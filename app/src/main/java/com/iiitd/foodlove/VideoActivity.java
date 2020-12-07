@@ -62,6 +62,15 @@ public class VideoActivity extends AppCompatActivity {
         else if(video.equals(getResources().getString(R.string.Chewfast))){
             videoName = "chewing fast";
         }
+        else if(video.equals(getResources().getString(R.string.Tom))){
+            videoName = "tom";
+        }
+        else if(video.equals(getResources().getString(R.string.Jerry))){
+            videoName = "jerry";
+        }
+        else if(video.equals(getResources().getString(R.string.Doraemon))){
+            videoName = "doraemon";
+        }
         else{
             videoName = "null";
             System.out.println("Video not available.");

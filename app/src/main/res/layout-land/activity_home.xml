@@ -8,74 +8,169 @@
     tools:context=".HomeScreen"
     tools:ignore="MissingDefaultResource">
 
-    <RadioGroup
-        android:id="@+id/rg"
-        android:layout_width="400dp"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="291dp"
         android:layout_height="0dp"
-        android:checkedButton="@id/rb_spider"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="Start"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_stop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="40dp"
+            android:text="Stop"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center|top"
+            android:text="20s"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Time Control"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
-            android:id="@+id/rb_spider"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/Spiderman" />
+            android:gravity="start|center_horizontal"
+            android:paddingStart="30dp"
+            android:text="Character"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/rb_super"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Superman" />
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:checkedButton="@id/rb_spider"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-        <RadioButton
-            android:id="@+id/rb_iron"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Ironman" />
+            <RadioButton
+                android:id="@+id/rb_spider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Spiderman"
+                android:textSize="16sp" />
 
-        <RadioButton
-            android:id="@+id/rb_flash"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Flash" />
+            <RadioButton
+                android:id="@+id/rb_super"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Superman"
+                android:textSize="16sp" />
 
-        <RadioButton
-            android:id="@+id/rb_swallow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Swallow" />
+            <RadioButton
+                android:id="@+id/rb_iron"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Ironman"
+                android:textSize="16sp" />
 
-        <RadioButton
-            android:id="@+id/rb_chewfast"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Chewfast" />
+            <RadioButton
+                android:id="@+id/rb_flash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Flash"
+                android:textSize="16sp" />
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/rb_swallow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Swallow"
+                android:textSize="16sp" />
 
+            <RadioButton
+                android:id="@+id/rb_chewfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Chewfast"
+                android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="122dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="108dp"
-        android:text="Start"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <RadioButton
+                android:id="@+id/rb_tom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Tom"
+                android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/btn_stop"
-        android:layout_width="122dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="108dp"
-        android:text="Stop"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
+            <RadioButton
+                android:id="@+id/rb_jerry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Jerry"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_doraemon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Doraemon"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

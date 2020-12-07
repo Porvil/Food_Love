@@ -1,5 +1,6 @@
 package com.iiitd.foodlove;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -17,6 +18,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -35,12 +39,22 @@ public class HomeScreen extends AppCompatActivity {
     RadioButton flash;
     RadioButton swallow;
     RadioButton chewfast;
+    RadioButton tom;
+    RadioButton jerry;
+    RadioButton doraemon;
     RadioGroup radioGroup;
+    TextView textView;
+    SeekBar seekBar;
+
+    Context context;
+    int timeInterval = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        context = this;
 
         view = findViewById(R.id.view);
         btn_start = findViewById(R.id.btn_start);
@@ -52,6 +66,11 @@ public class HomeScreen extends AppCompatActivity {
         flash = findViewById(R.id.rb_flash);
         swallow = findViewById(R.id.rb_swallow);
         chewfast = findViewById(R.id.rb_chewfast);
+        tom = findViewById(R.id.rb_tom);
+        jerry = findViewById(R.id.rb_jerry);
+        doraemon = findViewById(R.id.rb_doraemon);
+        textView = findViewById(R.id.textView);
+        seekBar = findViewById(R.id.seekBar);
 
         checkPermissions();
 
@@ -60,6 +79,31 @@ public class HomeScreen extends AppCompatActivity {
 
         receiver = new ServiceRestartAutomaticReceiver();
         registerReceiver(receiver, filter);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                // 20s to 520s
+                timeInterval = progress * 5 + 20;
+                if(timeInterval > 59){
+                    int min = timeInterval / 60;
+                    int sec = timeInterval % 60;
+                    textView.setText(min + "m " + sec + "s");
+                }
+                else{
+                    textView.setText(timeInterval + "s");
+                }
+
+                System.out.println(timeInterval);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+
+        });
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,11 +118,14 @@ public class HomeScreen extends AppCompatActivity {
                 AutomaticService mSensorService = new AutomaticService(getApplicationContext());
                 Intent mServiceIntent = new Intent(getApplicationContext(), mSensorService.getClass());
                 mServiceIntent.putExtra(Constants.HERO , hero);
+                mServiceIntent.putExtra(Constants.TIME , timeInterval);
                 if (!isMyServiceRunning(mSensorService.getClass())) {
+                    Toast.makeText(context, "Service Started", Toast.LENGTH_SHORT).show();
                     ContextCompat.startForegroundService(getApplicationContext(), mServiceIntent);
                 }
                 else{
                     stopService(mServiceIntent);
+                    Toast.makeText(context, "Service Stopped, Press Again to Start", Toast.LENGTH_SHORT).show();
                     System.out.println("Tried to stop");
                 }
             }
@@ -88,6 +135,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 System.out.println("STOP using button");
+                Toast.makeText(context, "Service Stopped", Toast.LENGTH_SHORT).show();
                 AutomaticService mSensorService = new AutomaticService(getApplicationContext());
                 Intent mServiceIntent = new Intent(getApplicationContext(), mSensorService.getClass());
                 stopService(mServiceIntent);
@@ -129,7 +177,7 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == Constants.PERMISSION_ALL) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Snackbar.make(view, "Permissions Granted.",

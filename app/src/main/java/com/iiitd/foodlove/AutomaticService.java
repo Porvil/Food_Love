@@ -25,6 +25,7 @@ public class AutomaticService extends Service {
     private Context context = null;
     private int counter = 0;
     public String hero;
+    public int timeInterval = 20000;
 
     @Nullable
     @Override
@@ -47,6 +48,8 @@ public class AutomaticService extends Service {
 
         if(intent != null){
             hero = intent.getStringExtra(Constants.HERO);
+            timeInterval = intent.getIntExtra(Constants.TIME, 20);
+            timeInterval *= 1000;
             System.out.println("hero ===== " + hero);
         }
 
@@ -75,7 +78,7 @@ public class AutomaticService extends Service {
     public void startTimer() {
         timer = new Timer();
         initializeTimerTask();
-        timer.schedule(timerTask, Constants.TIME_DELAY, Constants.TIME_PERIOD);
+        timer.schedule(timerTask, Constants.TIME_DELAY, timeInterval);
     }
 
     public void initializeTimerTask() {
@@ -111,7 +114,7 @@ public class AutomaticService extends Service {
 
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
         Notification notification = notificationBuilder.setOngoing(true)
-                .setContentTitle("Food Love is running in background")
+                .setContentTitle("Meal Habits is running in background")
                 .setPriority(NotificationManager.IMPORTANCE_MIN)
                 .setCategory(Notification.CATEGORY_SERVICE)
                 .build();

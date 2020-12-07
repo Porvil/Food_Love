@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Food Love</string>
+    <string name="app_name">Meal Habits</string>
 
     <string name="Ironman">Iron Man</string>
     <string name="Superman">Super Man</string>
@@ -7,5 +7,8 @@
     <string name="Flash">Flash</string>
     <string name="Swallow">Swallow vs Chew</string>
     <string name="Chewfast">Chew Fast vs Chew Slow</string>
+    <string name="Tom">Tom</string>
+    <string name="Jerry">Jerry</string>
+    <string name="Doraemon">Doraemon</string>
 
 </resources>
