@@ -4,7 +4,7 @@ Meal Habits is an android application which triggers a video at specific interbv
 
 ### Installation:
 
-- Download the APK from [v1.0-alpha.apk](https://github.com/Porvil/DSA_Visualizer_Android/releases/download/v1.0-alpha/v1.0-alpha.apk)
+- Download the APK from [v1.0-alpha.apk](https://github.com/Porvil/Meal_Habits/releases/download/v1.0-alpha/v1.0-alpha.apk)
 - Install the APK.
 
 ### Supported Android Versions:
