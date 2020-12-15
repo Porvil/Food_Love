@@ -10,16 +10,18 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodLove">
-        <activity android:name=".VideoActivity"
-            android:launchMode="singleInstance"
-            android:screenOrientation="landscape">
 
-        </activity>
-        <activity android:name=".HomeScreen"
+        <activity
+            android:name=".VideoActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".HomeScreen"
             android:launchMode="singleInstance"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -41,6 +43,7 @@
                 <action android:name="com.iiitd.foodlove.restartService" />
             </intent-filter>
         </receiver>
+
     </application>
 
 </manifest>

@@ -43,38 +43,38 @@ public class VideoActivity extends AppCompatActivity {
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
 
-        String videoName = "";
-        if(video.equals(getResources().getString(R.string.Spiderman))){
-            videoName = "spiderman";
-        }
-        else if(video.equals(getResources().getString(R.string.Superman))){
-            videoName = "superman";
-        }
-        else if(video.equals(getResources().getString(R.string.Ironman))){
-            videoName = "ironman";
-        }
-        else if(video.equals(getResources().getString(R.string.Flash))){
-            videoName = "flash";
-        }
-        else if(video.equals(getResources().getString(R.string.Swallow))){
-            videoName = "swallow";
-        }
-        else if(video.equals(getResources().getString(R.string.Chewfast))){
-            videoName = "chewing fast";
-        }
-        else if(video.equals(getResources().getString(R.string.Tom))){
-            videoName = "tom";
-        }
-        else if(video.equals(getResources().getString(R.string.Jerry))){
-            videoName = "jerry";
-        }
-        else if(video.equals(getResources().getString(R.string.Doraemon))){
-            videoName = "doraemon";
-        }
-        else{
-            videoName = "null";
-            System.out.println("Video not available.");
-        }
+        String videoName = video;
+//        if(video.equals(getResources().getString(R.string.Spiderman))){
+//            videoName = "spiderman";
+//        }
+//        else if(video.equals(getResources().getString(R.string.Superman))){
+//            videoName = "superman";
+//        }
+//        else if(video.equals(getResources().getString(R.string.Ironman))){
+//            videoName = "ironman";
+//        }
+//        else if(video.equals(getResources().getString(R.string.Flash))){
+//            videoName = "flash";
+//        }
+//        else if(video.equals(getResources().getString(R.string.Swallow))){
+//            videoName = "swallow";
+//        }
+//        else if(video.equals(getResources().getString(R.string.Chewfast))){
+//            videoName = "chewing fast";
+//        }
+//        else if(video.equals(getResources().getString(R.string.Tom))){
+//            videoName = "tom";
+//        }
+//        else if(video.equals(getResources().getString(R.string.Jerry))){
+//            videoName = "jerry";
+//        }
+//        else if(video.equals(getResources().getString(R.string.Doraemon))){
+//            videoName = "doraemon";
+//        }
+//        else{
+//            videoName = "null";
+//            System.out.println("Video not available.");
+//        }
 
         String rootPath = Constants.getAppPath();
         String videoPath = rootPath + "/" + videoName + ".mp4";

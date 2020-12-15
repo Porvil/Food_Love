@@ -1,14 +1,36 @@
 <resources>
     <string name="app_name">Meal Habits</string>
 
-    <string name="Ironman">Iron Man</string>
-    <string name="Superman">Super Man</string>
-    <string name="Spiderman">Spider Man</string>
+<!--    <string name="Ironman">Iron Man</string>-->
+<!--    <string name="Superman">Super Man</string>-->
+<!--    <string name="Spiderman">Spider Man</string>-->
+<!--    <string name="Flash">Flash</string>-->
+<!--    <string name="Swallow">Swallow vs Chew</string>-->
+<!--    <string name="Chewfast">Chew Fast vs Chew Slow</string>-->
+<!--    <string name="Tom">Tom</string>-->
+<!--    <string name="Jerry">Jerry</string>-->
+<!--    <string name="Doraemon">Doraemon</string>-->
+
+
+    <string name="Aquaman">Aquaman</string>
+    <string name="Batman">Batman</string>
+    <string name="Captain_America">Captain America</string>
+    <string name="Captain_Marvel">Captain Marvel</string>
+    <string name="Chew_fast_vs_Chew_slow">Chew fast vs Chew slow</string>
+    <string name="Chew_vs_Swallow">Chew vs Swallow</string>
+    <string name="Cyclops">Cyclops</string>
+    <string name="Eat_on_bed_vs_table">Eat on bed vs table</string>
     <string name="Flash">Flash</string>
-    <string name="Swallow">Swallow vs Chew</string>
-    <string name="Chewfast">Chew Fast vs Chew Slow</string>
-    <string name="Tom">Tom</string>
+    <string name="Half_eaten_vs_Full_eaten">Half eaten vs Full eaten</string>
+    <string name="Hulk">Hulk</string>
+    <string name="Ironman">Ironman</string>
     <string name="Jerry">Jerry</string>
-    <string name="Doraemon">Doraemon</string>
+    <string name="Krrish">Krrish</string>
+    <string name="Spiderman">Spiderman</string>
+    <string name="Superman">Superman</string>
+    <string name="Tom">Tom</string>
+
+
+
 
 </resources>
