@@ -41,438 +41,195 @@
                     android:id="@+id/rg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:checkedButton="@id/rb_aqua"
                     android:paddingStart="10dp"
                     android:paddingTop="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="80dp"
                         android:text="Character"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
+                        android:id="@+id/rb_aqua"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/aqua"
+                        android:text="@string/Aquaman"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:id="@+id/rb_aqua"
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Aquaman"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/aqua" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
+                        android:id="@+id/rb_bat"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/batman"
+                        android:text="@string/Batman"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Batman"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/batman" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/captain_america"
+                        android:text="@string/Captain_America"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Captain_America"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/captain_america" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/captain_marvel"
+                        android:text="@string/Captain_Marvel"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Captain_Marvel"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/captain_marvel" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/cyclops"
+                        android:text="@string/Cyclops"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Cyclops"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/cyclops" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/flash"
+                        android:text="@string/Flash"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Flash"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/flash" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/hulk"
+                        android:text="@string/Hulk"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Hulk"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/hulk" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/ironman"
+                        android:text="@string/Ironman"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Ironman"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/ironman" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/jerry"
+                        android:text="@string/Jerry"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Jerry"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/jerry" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/krrish"
+                        android:text="@string/Krrish"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Krrish"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/krrish" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/spiderman"
+                        android:text="@string/Spiderman"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Spiderman"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/spiderman" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/superman"
+                        android:text="@string/Superman"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Superman"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/superman" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Tom"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/tom" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:drawableRight="@drawable/tom"
+                        android:text="@string/Tom"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="80dp"
                         android:text="Habits"
                         android:textSize="30sp"
                         android:textStyle="bold" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/chew_vs_swallow"
+                        android:text="@string/Chew_vs_Swallow"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Chew_vs_Swallow"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/chew_vs_swallow" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/chew_fast_vs_slow"
+                        android:text="@string/Chew_fast_vs_Chew_slow"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Chew_fast_vs_Chew_slow"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/chew_fast_vs_slow" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
+                        android:drawableRight="@drawable/eat_on_bed_vs_table"
+                        android:text="@string/Eat_on_bed_vs_table"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Eat_on_bed_vs_table"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/eat_on_bed_vs_table" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:paddingBottom="5dp">
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:text="@string/Half_eaten_vs_Full_eaten"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/half_eaten_vs_full_eaten" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:drawableRight="@drawable/half_eaten_vs_full_eaten"
+                        android:text="@string/Half_eaten_vs_Full_eaten"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                 </RadioGroup>
